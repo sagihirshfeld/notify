@@ -51,14 +51,14 @@ class Notifier:
                                aws_access_key_id=self.access_key,
                                region_name='default', 
                                aws_secret_access_key=self.secret_key,
-                               config=botocore.client.Config(signature_version = 's3'))
+        )
 
         self.s3 = boto3.client('s3',
                               endpoint_url = self.endpoint_url,
                               aws_access_key_id = self.access_key,
                               aws_secret_access_key = self.secret_key,
                               region_name = 'default',
-                              config=botocore.client.Config(signature_version = 's3'))
+       )
 
 
     ''' This function creates and sns-like topic with configured push endpoint'''
